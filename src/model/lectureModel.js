@@ -9,9 +9,12 @@ const lectureSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  videoUrl: {
-    type: String,
-    required: true,
+  date: {
+    type: Date,
+  },
+  instructor: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Instructor",
   },
   course: {
     type: mongoose.Schema.Types.ObjectId,
