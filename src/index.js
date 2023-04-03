@@ -18,4 +18,8 @@ app.use(cors(corsOpts));
 app.use(express.json({ limit: "5mb", extended: true }));
 app.use(express.urlencoded({ limit: "5mb", extended: true }));
 
+app.use("/api/course", require("./routes/courseRoutes"));
+app.use("/api/instructor", require("./routes/instructorRoutes"));
+app.use("/api/lecture", require("./routes/lectureRoutes"));
+
 app.listen(port, () => console.log(`Listening on port ${port}`));

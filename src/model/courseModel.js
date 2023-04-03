@@ -16,12 +16,10 @@ const courseSchema = new mongoose.Schema({
   // will recieve image in bash64 format
   image: {
     type: String,
-    required: true,
   },
   instructor: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Instructor",
-    required: true,
   },
 });
 

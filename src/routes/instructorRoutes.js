@@ -3,18 +3,18 @@ const router = express.Router();
 const instructorController = require("../controller/instructorController");
 
 // Get all instructor
-router.get("/instructors", instructorController.getAllInstructors);
+router.get("/", instructorController.getAllInstructors);
 
 // Get a single instructor
-router.get("/instructors/:id", instructorController.getInstructor);
+router.get("/:id", instructorController.getInstructor);
 
 // Create a new instructor
-router.post("/instructors", instructorController.createInstructor);
+router.post("/", instructorController.createInstructor);
 
 // Update an existing instructor
-router.put("/instructors/:id", instructorController.updateInstructor);
+router.put("/:id", instructorController.updateInstructor);
 
 // Delete an existing instructor
-router.delete("/instructors/:id", instructorController.deleteInstructor);
+router.delete("/:id", instructorController.deleteInstructor);
 
 module.exports = router;
